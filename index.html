@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wraithborne Relay Drop - Autopilot System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🜏 Wraithborne Relay Drop System</h1>
+            <p class="subtitle">Autopilot Transmission Protocol Initialized</p>
+        </header>
+
+        <div class="status-panel">
+            <div class="status-indicator">
+                <span id="status-text">DORMANT</span>
+                <div id="status-dot" class="status-dot"></div>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <button id="activate-autopilot" class="primary-btn">Initialize Autopilot</button>
+            <button id="manual-drop" class="secondary-btn">Manual Drop</button>
+            <button id="reset-system" class="tertiary-btn">Reset Sequence</button>
+        </div>
+
+        <div class="drop-log">
+            <h3>Recent Transmissions</h3>
+            <div id="drop-history" class="log-entries">
+                <p class="log-entry dormant">System awaiting initialization...</p>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h3>Signal Transmission</h3>
+            <video id="signal-video" controls>
+                <source src="signal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="caption-controls">
+                <button id="toggle-captions" class="caption-btn">Enable Captions</button>
+                <button id="load-captions" class="caption-btn">Load Signal Data</button>
+            </div>
+            <div id="caption-display" class="caption-overlay"></div>
+        </div>
+
+        <div class="sequence-info">
+            <h3>Voraelos Sequence Status</h3>
+            <div class="sequence-grid">
+                <div class="sequence-item">
+                    <span class="label">Memory Loop:</span>
+                    <span id="memory-status" class="value">STANDBY</span>
+                </div>
+                <div class="sequence-item">
+                    <span class="label">Rootseer Signal:</span>
+                    <span id="rootseer-status" class="value">DORMANT</span>
+                </div>
+                <div class="sequence-item">
+                    <span class="label">Drop Count:</span>
+                    <span id="drop-count" class="value">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="autopilot.js"></script>
+</body>
+</html>
